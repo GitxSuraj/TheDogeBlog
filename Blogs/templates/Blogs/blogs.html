@@ -1,0 +1,36 @@
+{% extends 'Blogs/base.html' %}
+{% block title %}Blog{% endblock title %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'Blogs/css/blog.css' %}">{% endblock style %}
+{% block main %}
+<div class="all-blogs">
+    {% for blogs in allBlogs %}
+    <div class="blog-box">
+        <div class="card">
+            {%for i in blogs%}
+            <a href="/blog/blog_post={{i.blog_id}}/topic={{i.blog_title}}" id="id{{i.blog_id}}">
+                <div class="cardco">
+                    <div class="img">
+                        <img src="/media/{{i.blog_image}}" class="img-box" alt="">
+                    </div>
+                    <div class="preview">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempore adipisci perferendis officiis rem quas aspernatur sit. Eligendi earum porro hic voluptatibus rem maxime perferendis incidunt et aperiam dolores harum, commodi excepturi blanditiis officiis beatae odit itaque, voluptates consectetur temporibus. Cumque, sunt pariatur autem vitae sapiente ut rem eligendi, nisi officia omnis voluptatum mollitia quidem amet laudantium sint numquam harum iusto architecto accusamus nihil. Eveniet voluptatum ipsa nostrum quasi! Eum sint alias animi adipisci veritatis voluptatum asperiores, excepturi veniam fugiat doloribus aspernatur laudantium vitae, autem totam ipsam nulla natus officia distinctio. Voluptatum culpa fugit dolorum magnam, porro doloremque nemo placeat?
+                    </div>
+
+                </div>
+                <hr>
+                <div class="card-body">
+                    <h3 class="card-title" id="namepr{{i.blog_id}}">{{i.blog_title}}</h3>
+            </a>
+
+    </div>
+</div>
+
+<div class="card">{% endfor %}</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock main %}

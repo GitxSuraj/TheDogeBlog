@@ -1,0 +1,38 @@
+.blog{
+    margin-top: 35px;
+    display: inline-block;
+  }  
+  .blog_img{
+    width: 30vw;
+    position: fixed;
+    top: 15%;
+    left: 60%;
+  }
+  
+  .cardco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .preview{
+    margin: 12px;
+  }
+  .blog_img img{
+    width: 30vw;
+  }
+  .blog_img .img_caption{
+    position: absolute;
+    top: 100%;
+    left: 19%;
+    padding: 2.3px;
+    background-color: rgba(0, 0, 0, 0.507);
+  }
+  .blog_text{
+    max-width: 50vw;
+  }
+  .blog_text h2{
+    margin: 10px 5px;
+  }
+  .blog_text span{
+     margin-left: 10px;
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://drive.google.com/file/d/19Mh2hfN85bM5fCrkIMiu9RmkBF7GN5Wp/view?usp=sharing">
+    <link rel="stylesheet" type="text/css" href="{% static 'Blogs/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Blogs/css/utilities.css' %}">
+    {% block style %}{% endblock style %}
+    
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="/" class="logo">TheDogeBlogs</a>
+                <a href="/" class="l1">Home</a>
+                <a href="/blogs" class="l2">Blogs</a>
+                <a href="/contact" class="l3">Contact Us</a>
+                <a href="/about" class="l4">About Us</a>
+            
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <!-- <a href="#" >
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search across Blogs & Videos">
+                    <button class="search-btn" style="color: black;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
+                  </div>
+            </a> -->
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+          {% for message in messages  %} 
+      <div class=" alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message : </strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      {% endfor %} 
+            {% block main %}{% endblock main %}
+        </div>
+        <hr>
+        <footer>
+            <div class="footer">
+                <p>Copyright 2021-22 mycompany.com</p>
+<div class="socialmedia-box">
+                <p style="
+    margin-right: 12px;
+">Connect with us on</p>
+                <div class="socialmedia">
+<span class="smlks"><a href="https://facebook.com/rrpt" rel="nofollow"><img src="{% static 'Blogs/img/fb.png' %}" alt="" style="width: 25px;"></a></span>
+<span class="smlks"><a href="https://insatgram.com/rrpt" rel="nofollow"><img src="{% static 'Blogs/img/ig.png' %}" alt="" style="width: 25px;"></a></span>                    
+<span class="smlks"><a href="https://twitter.com/rrpt" rel="nofollow"><img src="{% static 'Blogs/img/tw.webp'%}" alt="" style="width: 25px;"></a></span>
+<span class="smlks"><a href="https://t.me/@rrpt" rel="nofollow"><img src="{% static 'Blogs/img/tg.png' %}" alt="" style="width: 25px;"></a></span></div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="{% static 'Blogs/js/nav.js' %}"></script>
+
+</body>
+
+</html>

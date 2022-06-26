@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .contact_form{
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-input-box{
+    margin-bottom: 1rem;
+    width: 60vw;
+  }
+  .form-input-select{
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    border: none;
+  }
+  .form-input-select option{
+    font-size: 18px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 4px;
+  }
+  .form-input{
+    padding: 4px 6px;
+    width: 50vw;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+  }
+  .form-submit-button{
+    position: absolute;
+    right: 27%;
+    padding: 4px 6px;
+    width: 5rem;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 6px;
+    background: black;
+    color: white;
+  }
+  
+  .form-submit-button:hover{
+    color: black;
+    border: 1px solid white;
+    border-radius: 8px;
+    background: #1c87c9;
+    box-shadow: 0 0 15px #0003b6;
+  }
