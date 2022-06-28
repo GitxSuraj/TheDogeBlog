@@ -1,0 +1,46 @@
+{% extends 'Blogs/base.html' %}
+{% block title %}Contact{% endblock title %}
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Blogs/css/contact.css' %}">{% endblock style %}
+{% block main %}
+            <div class="contact_form">
+                <form action="/contact/" method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <div class="contact-input-box">
+                        <label for="name" class="form-input-label">Your Name :</label>
+                        <input type="text" class="form-input" id="name" name="name" placeholder="Your name"
+                            aria-label="Your name" required>
+                    </div>
+                    <div class="contact-input-box">
+                        <label for="email" class="form-input-label">Your Email Adress :</label>
+                        <input type="email" class="form-input" id="email" name="email"
+                            placeholder="examplemail@example.com" aria-label="Email Adress" required>
+                    </div>
+                    <div class="contact-input-box">
+                        <label for="phone" class="form-input-label">Your Phone Number :</label>
+                        <input type="tel" class="form-input" name="telephone" id="telephone"
+                            placeholder="+91 0123456789" aria-label="Phone no" required>
+                    </div>
+                    <div class="contact-input-box">
+                        <label for="contact" class="form-input-label">Your <select class="form-input-select"
+                                aria-label="contact" name="desc_type" required>
+                                <span class="form-input-label">Select your Input Type</span>
+                                <option selected>Suggestion</option>
+                                <option>Comments</option>
+                                <option>Query</option>
+                                <option>Others</option>
+                            </select></label>
+                        <textarea class="form-input" id="contact" name="desc" rows="3"
+                            placeholder="Describe how can we help you?"></textarea required>
+                    </div>
+                     <button type="submit" class="form-submit-button">Submit</button>
+                </form>
+            </div>
+        <script>
+        {% if thank %}
+            alert("Hey, {{name}}Thanks for your {{desc_type}}.")
+            document.location = "/";
+        {% endif %}
+        </script>
+{% endblock main %}

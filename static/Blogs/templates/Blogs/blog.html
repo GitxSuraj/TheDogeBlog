@@ -1,0 +1,27 @@
+{% extends 'Blogs/base.html' %}
+{% block title %}{{blog_view.blog_title}}{% endblock title %}
+{% block style %}
+<style>
+    body{
+    background: url("/media/{{blog_view.blog_bg}}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+{% endblock style %}
+{% block main %}  
+<div class="blog">
+    <div class="blog_text">
+        <h2>{{blog_view.blog_title}}</h2>
+        <!-- <p></p> -->
+        <span>{{blog_view.blog}}</span>
+    </div>
+    <div class="blog_img">
+        <img src="/media/{{blog_view.blog_image}}" alt="" class="main_img">
+        <div class="img_caption">
+            <span>{{blog_view.blog_img_caption}}</span>
+        </div>
+    </div>
+</div>
+{% endblock main %}
