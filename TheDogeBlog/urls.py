@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('Blogs.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'Blogs.views.error_404'
 handler500 = 'Blogs.views.error_500'
